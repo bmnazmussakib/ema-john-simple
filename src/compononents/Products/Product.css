@@ -1,0 +1,27 @@
+.product{
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-right: 30px;
+    
+}
+
+.product-name{
+    padding-left: 70px;
+}
+
+.product-name h2{
+    font-weight: 400;
+    color: blue;
+}
+
+.order-button{
+    background-color: orange;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding: 10px 30px;
+    cursor: pointer;
+
+}
