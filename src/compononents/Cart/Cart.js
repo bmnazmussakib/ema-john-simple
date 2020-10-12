@@ -6,9 +6,10 @@ const Cart = (props) => {
     let totalItem = 0;
     for(let i = 0; i<cart.length; i++){
         const items = cart[i];
-        totalItem = totalItem + items.price;
+        totalItem = totalItem + items.price * (items.quantity);
+        console.log(items)
     }
-
+    
     let shipping = 0;
     if(totalItem > 100){
         shipping = 0;
@@ -22,6 +23,7 @@ const Cart = (props) => {
 
     let total = totalItem + shipping;
 
+    
     totalItem = totalItem.toFixed(2);
     total = total.toFixed(2);
     
@@ -33,6 +35,7 @@ const Cart = (props) => {
             <h5>Total item price: $ {totalItem}</h5>
             <h5>Shipping Cost: $ {shipping}</h5>
             <h3>Total: $ {total}</h3>
+            <button className="order-button">Review Order</button>
 
         </div>
     );
