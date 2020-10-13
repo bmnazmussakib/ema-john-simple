@@ -1,13 +1,13 @@
 import React from 'react';
 
+
 const Cart = (props) => {
     const cart = props.cart;
 
     let totalItem = 0;
     for(let i = 0; i<cart.length; i++){
         const items = cart[i];
-        totalItem = totalItem + items.price * (items.quantity);
-        console.log(items)
+        totalItem = totalItem + items.price*items.quantity ; 
     }
     
     let shipping = 0;
@@ -22,10 +22,11 @@ const Cart = (props) => {
     }
 
     let total = totalItem + shipping;
-
     
-    totalItem = totalItem.toFixed(2);
-    total = total.toFixed(2);
+   
+    
+    
+    
     
 
     return (
@@ -35,7 +36,9 @@ const Cart = (props) => {
             <h5>Total item price: $ {totalItem}</h5>
             <h5>Shipping Cost: $ {shipping}</h5>
             <h3>Total: $ {total}</h3>
-            <button className="order-button">Review Order</button>
+            {
+                props.children
+            }
 
         </div>
     );
